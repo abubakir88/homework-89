@@ -9,16 +9,14 @@ import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
 import { useAuthStore } from "../../app/auth/useAuthStore";
+import { defaultTheme } from ".";
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
-
-const Login = () => {
+export const Login = () => {
   const nav = useNavigate();
-  const { login } = useAuthStore();
+  const { login: any } = useAuthStore();
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -115,5 +113,3 @@ const Login = () => {
     </ThemeProvider>
   );
 };
-
-export default Login;

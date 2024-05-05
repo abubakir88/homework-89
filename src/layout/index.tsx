@@ -22,11 +22,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   };
 
   const token = localStorage.getItem("access_token");
-  // React.useEffect(() => {
-  //   if (!token) {
-  //     navigate("/login");
-  //   }
-  // }, [token]);
+  React.useEffect(() => {
+    if (!token) {
+      navigate("/login");
+    }
+  }, [navigate, token]);
 
   return (
     <ThemeProvider theme={defaultTheme}>
