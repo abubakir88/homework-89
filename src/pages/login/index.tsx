@@ -18,7 +18,7 @@ const defaultTheme = createTheme();
 
 const Login = () => {
   const nav = useNavigate();
-  const { login } = useAuthStore();
+  const { login:void } = useAuthStore();
   const [data, setData] = useState({
     email: "",
     password: "",
