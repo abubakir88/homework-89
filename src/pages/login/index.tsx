@@ -11,14 +11,14 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
-import { useAuthStore } from "../../app/auth/useAuthStore";
+// import { useAuthStore } from "../../app/auth/useAuthStore";
 
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 const Login = () => {
   const nav = useNavigate();
-  useAuthStore();
+  // const { login } = useAuthStore();
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -33,7 +33,7 @@ const Login = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await login(data);
+    // await login(data);
     nav("/");
   };
 
