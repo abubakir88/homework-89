@@ -14,19 +14,19 @@ import Header from "./header";
 const defaultTheme = createTheme();
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [open, setOpen] = React.useState(true);
   const toggleDrawer = () => {
     setOpen(!open);
   };
 
-  const token = localStorage.getItem("access_token");
-  React.useEffect(() => {
-    if (!token) {
-      navigate("/login");
-    }
-  }, [navigate, token]);
+  // const token = localStorage.getItem("access_token");
+  // React.useEffect(() => {
+  //   if (!token) {
+  //     navigate("/login");
+  //   }
+  // }, [navigate, token]);
 
   return (
     <ThemeProvider theme={defaultTheme}>
